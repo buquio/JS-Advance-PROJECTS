@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - AngularJs Authentication</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.3.12/css/ngDialog.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.3.12/css/ngDialog-theme-default.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.3.12/css/ngDialog-theme-default.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section ng-app="myapp">
+<div ui-view="viewA"></div>
+    <div ui-view="viewB"></div>
+    <!-- Also a way to navigate -->
+    <a ui-sref="welcome">Welcome</a>
+    <a ui-sref="app.dashboard">Application</a>  
+  </section> 
+
+
+<script type="text/ng-template" id="modallogindialogId">
+<div>
+                  <form ng-submit="LoginModalCtrl.submit(_email, _password)">
+                    <input type="email" ng-model="_email" />
+                    <input type="password" ng-model="_password" />
+                    <button>Submit</button>
+                  </form>
+                  <button ng-click="LoginModalCtrl.cancel()">Cancel</button>
+                </div>
+  
+</script>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.3.12/js/ngDialog.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
